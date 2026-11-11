@@ -1,0 +1,35 @@
+
+/* General website styling */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    text-align: center;
+    padding: 40px 15px;
+}
+
+/* Main heading */
+
+h1 {
+    color: #183153;
+    font-size: 30px;
+}
+
+/* Paragraph */
+
+p {
+    color: #555555;
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+/* Button */
+
+button {
+    background-color: #183153;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
