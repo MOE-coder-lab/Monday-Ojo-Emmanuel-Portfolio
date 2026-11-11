@@ -1,0 +1,1567 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#071a35">
+
+  <title>Monday Ojo Emmanuel | Digital Operations & Web Solutions</title>
+
+  <meta name="description" content="Monday Ojo Emmanuel — Digital Operations, Front-End Development, CRM Management, Customer Support, Web Solutions and Administrative Support professional based in Nigeria.">
+
+  <meta name="author" content="Monday Ojo Emmanuel">
+
+  <meta property="og:title" content="Monday Ojo Emmanuel | Professional Portfolio">
+  <meta property="og:description" content="Digital Operations, Web Solutions, CRM and Customer Support. Explore my work and projects.">
+  <meta property="og:type" content="website">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --navy: #071a35;
+      --navy-light: #102b50;
+      --gold: #d8ad58;
+      --gold-light: #f1d89c;
+      --white: #ffffff;
+      --background: #f7f8fb;
+      --text: #26364b;
+      --muted: #6c7889;
+      --border: #e6e9ef;
+      --shadow: 0 15px 45px rgba(7,26,53,.09);
+      --radius: 18px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 90px;
+    }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      color: var(--text);
+      background: var(--background);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    button {
+      font: inherit;
+    }
+
+    .container {
+      width: min(1120px, 90%);
+      margin: auto;
+    }
+
+    /* NAVIGATION */
+
+    header {
+      background: rgba(7,26,53,.97);
+      color: white;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      backdrop-filter: blur(15px);
+      border-bottom: 1px solid rgba(255,255,255,.09);
+    }
+
+    .navbar {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--gold);
+      letter-spacing: .4px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
+
+    .nav-links a {
+      font-size: 13px;
+      font-weight: 600;
+      color: #e7edf6;
+      transition: .3s;
+    }
+
+    .nav-links a:hover {
+      color: var(--gold);
+    }
+
+    .nav-contact {
+      border: 1px solid var(--gold);
+      padding: 9px 17px;
+      border-radius: 30px;
+      color: var(--gold) !important;
+    }
+
+    .menu-toggle {
+      display: none;
+      color: white;
+      border: 0;
+      background: transparent;
+      font-size: 27px;
+      cursor: pointer;
+    }
+
+    /* HERO */
+
+    .hero {
+      background:
+        radial-gradient(circle at 85% 20%, rgba(216,173,88,.15), transparent 30%),
+        linear-gradient(125deg, #071a35, #102b50);
+      color: white;
+      padding: 105px 0 100px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::after {
+      content: "";
+      width: 350px;
+      height: 350px;
+      border: 1px solid rgba(216,173,88,.2);
+      border-radius: 50%;
+      position: absolute;
+      right: -120px;
+      bottom: -180px;
+    }
+
+    .hero-content {
+      display: grid;
+      grid-template-columns: 1.4fr .8fr;
+      align-items: center;
+      gap: 65px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      color: var(--gold-light);
+      border: 1px solid rgba(216,173,88,.45);
+      background: rgba(216,173,88,.08);
+      border-radius: 30px;
+      padding: 7px 15px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 22px;
+    }
+
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(42px, 6vw, 67px);
+      line-height: 1.13;
+      margin-bottom: 18px;
+      letter-spacing: -.8px;
+    }
+
+    .hero h1 span {
+      color: var(--gold);
+    }
+
+    .hero h2 {
+      font-size: 19px;
+      color: #e6c985;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+
+    .hero-description {
+      color: #d5dfed;
+      max-width: 620px;
+      font-size: 15px;
+      margin-bottom: 30px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 13px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      padding: 13px 22px;
+      border-radius: 7px;
+      font-size: 13px;
+      font-weight: 700;
+      transition: transform .3s, background .3s;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+    }
+
+    .btn-gold {
+      background: var(--gold);
+      color: var(--navy);
+    }
+
+    .btn-outline {
+      border: 1px solid rgba(255,255,255,.6);
+      color: white;
+    }
+
+    .profile-area {
+      display: flex;
+      justify-content: center;
+    }
+
+    .profile-frame {
+      width: 290px;
+      height: 350px;
+      border: 2px solid var(--gold);
+      border-radius: 150px 150px 25px 25px;
+      padding: 10px;
+      position: relative;
+      background: rgba(255,255,255,.05);
+      box-shadow: 0 25px 60px rgba(0,0,0,.25);
+    }
+
+    .profile-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 145px 145px 18px 18px;
+      background: #18314e;
+    }
+
+    .profile-label {
+      position: absolute;
+      bottom: 20px;
+      left: -25px;
+      background: white;
+      color: var(--navy);
+      padding: 12px 17px;
+      border-radius: 9px;
+      font-size: 12px;
+      font-weight: 800;
+      box-shadow: var(--shadow);
+    }
+
+    /* MOVING PROFESSIONAL BANNER */
+
+    .ticker {
+      background: var(--gold);
+      color: var(--navy);
+      overflow: hidden;
+      padding: 14px 0;
+    }
+
+    .ticker-track {
+      display: flex;
+      width: max-content;
+      animation: tickerMove 38s linear infinite;
+    }
+
+    .ticker:hover .ticker-track {
+      animation-play-state: paused;
+    }
+
+    .ticker-item {
+      white-space: nowrap;
+      padding: 0 35px;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 1.1px;
+      text-transform: uppercase;
+    }
+
+    @keyframes tickerMove {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+
+    /* GENERAL SECTIONS */
+
+    section {
+      padding: 85px 0;
+    }
+
+    .section-heading {
+      text-align: center;
+      max-width: 680px;
+      margin: 0 auto 45px;
+    }
+
+    .section-heading small {
+      color: #a47a2f;
+      text-transform: uppercase;
+      font-weight: 800;
+      font-size: 11px;
+      letter-spacing: 2px;
+    }
+
+    .section-heading h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(30px, 4vw, 42px);
+      color: var(--navy);
+      line-height: 1.25;
+      margin: 12px 0;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    /* ABOUT */
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 50px;
+      align-items: center;
+    }
+
+    .about-copy h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 28px;
+      color: var(--navy);
+      margin-bottom: 17px;
+    }
+
+    .about-copy p {
+      color: var(--muted);
+      font-size: 14px;
+      margin-bottom: 15px;
+    }
+
+    .about-note {
+      background: var(--navy);
+      color: white;
+      border-radius: var(--radius);
+      padding: 30px;
+      border-left: 5px solid var(--gold);
+    }
+
+    .about-note h3 {
+      font-family: 'Playfair Display', serif;
+      color: var(--gold-light);
+      font-size: 23px;
+      margin-bottom: 12px;
+    }
+
+    .about-note p {
+      color: #d6e0ed;
+      font-size: 14px;
+    }
+
+    /* SKILLS */
+
+    .skills-section {
+      background: #fff;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .skill-card {
+      background: white;
+      border: 1px solid var(--border);
+      padding: 27px;
+      border-radius: var(--radius);
+      transition: .3s;
+    }
+
+    .skill-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow);
+      border-color: var(--gold);
+    }
+
+    .skill-icon {
+      font-size: 26px;
+      margin-bottom: 15px;
+    }
+
+    .skill-card h3 {
+      color: var(--navy);
+      font-size: 16px;
+      margin-bottom: 13px;
+    }
+
+    .skill-card ul {
+      list-style: none;
+    }
+
+    .skill-card li {
+      color: var(--muted);
+      font-size: 12px;
+      padding: 5px 0;
+    }
+
+    .skill-card li::before {
+      content: "✓";
+      color: #b58a3e;
+      font-weight: 900;
+      margin-right: 9px;
+    }
+
+    /* PROJECTS */
+
+    .projects-section {
+      background: var(--background);
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .project-card {
+      background: white;
+      border-radius: var(--radius);
+      overflow: hidden;
+      border: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      transition: .3s;
+    }
+
+    .project-card:hover {
+      transform: translateY(-7px);
+      box-shadow: var(--shadow);
+    }
+
+    .project-top {
+      background: linear-gradient(135deg, var(--navy), #1b416b);
+      min-height: 155px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--gold);
+      font-size: 45px;
+    }
+
+    .project-content {
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    .project-tag {
+      color: #a47a2f;
+      font-size: 10px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 10px;
+    }
+
+    .project-content h3 {
+      color: var(--navy);
+      font-size: 17px;
+      margin-bottom: 12px;
+    }
+
+    .project-content p {
+      color: var(--muted);
+      font-size: 13px;
+      margin-bottom: 20px;
+      flex: 1;
+    }
+
+    .project-link {
+      color: #9a702a;
+      font-size: 12px;
+      font-weight: 800;
+      display: inline-block;
+    }
+
+    .project-link:hover {
+      color: var(--navy);
+    }
+
+    /* EDUCATION / PARTNERSHIPS */
+
+    .learning-section {
+      background: var(--navy);
+      color: white;
+    }
+
+    .learning-section .section-heading h2 {
+      color: white;
+    }
+
+    .learning-section .section-heading p {
+      color: #cbd6e5;
+    }
+
+    .learning-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 22px;
+    }
+
+    .learning-card {
+      padding: 28px;
+      border: 1px solid rgba(216,173,88,.35);
+      border-radius: var(--radius);
+      background: rgba(255,255,255,.045);
+    }
+
+    .learning-card h3 {
+      color: var(--gold-light);
+      font-size: 19px;
+      margin-bottom: 12px;
+    }
+
+    .learning-card p {
+      color: #d1dbea;
+      font-size: 13px;
+      margin-bottom: 18px;
+    }
+
+    .learning-card a {
+      color: var(--gold);
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .learning-strip {
+      margin-top: 35px;
+      overflow: hidden;
+      border-top: 1px solid rgba(216,173,88,.3);
+      border-bottom: 1px solid rgba(216,173,88,.3);
+      padding: 17px 0;
+    }
+
+    .learning-track {
+      display: flex;
+      width: max-content;
+      animation: tickerMove 45s linear infinite;
+    }
+
+    .learning-strip:hover .learning-track {
+      animation-play-state: paused;
+    }
+
+    .learning-track span {
+      white-space: nowrap;
+      padding: 0 35px;
+      font-size: 12px;
+      color: var(--gold-light);
+      font-weight: 700;
+    }
+
+    /* EDUCATION */
+
+    .education-card {
+      max-width: 760px;
+      margin: auto;
+      background: white;
+      padding: 30px;
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+    }
+
+    .education-item {
+      padding: 14px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .education-item:last-child {
+      border: 0;
+    }
+
+    .education-item h3 {
+      font-size: 15px;
+      color: var(--navy);
+    }
+
+    .education-item p {
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    /* CONTACT */
+
+    .contact-section {
+      background: #fff;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: .8fr 1.2fr;
+      gap: 35px;
+    }
+
+    .contact-info {
+      background: var(--navy);
+      color: white;
+      padding: 32px;
+      border-radius: var(--radius);
+    }
+
+    .contact-info h3 {
+      font-family: 'Playfair Display', serif;
+      color: var(--gold-light);
+      font-size: 25px;
+      margin-bottom: 15px;
+    }
+
+    .contact-info p {
+      color: #d0dbea;
+      font-size: 13px;
+      margin-bottom: 22px;
+    }
+
+    .contact-detail {
+      padding: 13px 0;
+      border-bottom: 1px solid rgba(255,255,255,.12);
+      font-size: 13px;
+      overflow-wrap: anywhere;
+    }
+
+    .contact-detail strong {
+      display: block;
+      color: var(--gold-light);
+      font-size: 11px;
+      margin-bottom: 3px;
+      text-transform: uppercase;
+    }
+
+    .contact-form {
+      background: var(--background);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 30px;
+    }
+
+    .contact-form h3 {
+      color: var(--navy);
+      font-size: 21px;
+      margin-bottom: 20px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 14px;
+      margin-bottom: 14px;
+      border: 1px solid #dce1e9;
+      background: white;
+      border-radius: 7px;
+      outline: none;
+      font-family: inherit;
+      font-size: 13px;
+    }
+
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      border-color: var(--gold);
+    }
+
+    .contact-form textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    .contact-form button {
+      border: none;
+      cursor: pointer;
+    }
+
+    .form-message {
+      color: #49634b;
+      font-size: 12px;
+      margin-top: 10px;
+    }
+
+    /* GITHUB API */
+
+    .github-panel {
+      background: #f0f3f8;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 25px;
+      text-align: center;
+      margin-top: 35px;
+    }
+
+    .github-panel h3 {
+      color: var(--navy);
+      font-size: 17px;
+    }
+
+    .github-stats {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 35px;
+      margin: 18px 0;
+    }
+
+    .stat strong {
+      display: block;
+      color: #a47a2f;
+      font-size: 25px;
+    }
+
+    .stat span {
+      color: var(--muted);
+      font-size: 11px;
+    }
+
+    /* FOOTER */
+
+    footer {
+      background: #041225;
+      color: #cbd5e2;
+      text-align: center;
+      padding: 35px 15px;
+    }
+
+    footer strong {
+      color: var(--gold);
+    }
+
+    footer p {
+      font-size: 12px;
+      margin: 7px 0;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin: 18px 0;
+    }
+
+    .footer-links a {
+      font-size: 12px;
+      color: var(--gold-light);
+    }
+
+    /* SCROLL REVEAL */
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(22px);
+      transition: opacity .8s ease, transform .8s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* RESPONSIVE DESIGN */
+
+    @media (max-width: 850px) {
+      .hero-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 45px;
+      }
+
+      .hero-description {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .hero-actions {
+        justify-content: center;
+      }
+
+      .skills-grid,
+      .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .about-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .profile-frame {
+        width: 250px;
+        height: 310px;
+      }
+    }
+
+    @media (max-width: 650px) {
+      .navbar {
+        min-height: 68px;
+      }
+
+      .logo {
+        font-size: 19px;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .nav-links {
+        position: absolute;
+        top: 68px;
+        left: 0;
+        width: 100%;
+        background: var(--navy);
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        padding: 20px 6%;
+        gap: 17px;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .nav-contact {
+        text-align: center;
+      }
+
+      .hero {
+        padding: 75px 0;
+      }
+
+      .hero h1 {
+        font-size: 43px;
+      }
+
+      section {
+        padding: 65px 0;
+      }
+
+      .skills-grid,
+      .projects-grid,
+      .learning-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .profile-frame {
+        width: 225px;
+        height: 280px;
+      }
+
+      .profile-label {
+        left: -12px;
+      }
+
+      .contact-info,
+      .contact-form {
+        padding: 23px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        scroll-behavior: auto !important;
+        animation-duration: .01ms !important;
+        transition-duration: .01ms !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+  <header>
+    <div class="container navbar">
+      <a href="#home" class="logo">MOE.</a>
+
+      <button class="menu-toggle" id="menuToggle"
+        aria-label="Open navigation" aria-expanded="false">☰</button>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Expertise</a>
+        <a href="#projects">Projects</a>
+        <a href="#learning">Development</a>
+        <a href="#contact" class="nav-contact">Let's Connect</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <div class="container hero-content">
+
+        <div class="hero-text reveal">
+          <span class="eyebrow">Professional Portfolio · Nigeria</span>
+
+          <h1>Monday Ojo <span>Emmanuel</span></h1>
+
+          <h2>Digital Operations | Web Solutions | CRM & Customer Support</h2>
+
+          <p class="hero-description">
+            I combine technology, digital business operations and customer
+            engagement to create practical solutions that help businesses
+            strengthen their online presence, manage relationships and
+            improve everyday operations.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-gold">Explore My Work ↗</a>
+            <a href="#contact" class="btn btn-outline">Contact Me</a>
+          </div>
+        </div>
+
+        <div class="profile-area reveal">
+          <div class="profile-frame">
+            <img
+              src="file_00000000c7a8820c9acc461397001f6d.gif"
+              alt="Professional profile photograph of Monday Ojo Emmanuel"
+              onerror="this.style.display='none'; this.parentElement.style.background='#18314e';">
+            <div class="profile-label">
+              Digital Operations & Web Solutions
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- PROFESSIONAL MOVING BANNER -->
+    <div class="ticker" aria-label="Professional skills">
+      <div class="ticker-track">
+        <span class="ticker-item">Digital Operations ✦</span>
+        <span class="ticker-item">Front-End Development ✦</span>
+        <span class="ticker-item">CRM Management ✦</span>
+        <span class="ticker-item">Customer Support ✦</span>
+        <span class="ticker-item">Business Automation ✦</span>
+        <span class="ticker-item">Virtual Assistance ✦</span>
+        <span class="ticker-item">Social Media Management ✦</span>
+
+        <span class="ticker-item">Digital Operations ✦</span>
+        <span class="ticker-item">Front-End Development ✦</span>
+        <span class="ticker-item">CRM Management ✦</span>
+        <span class="ticker-item">Customer Support ✦</span>
+        <span class="ticker-item">Business Automation ✦</span>
+        <span class="ticker-item">Virtual Assistance ✦</span>
+        <span class="ticker-item">Social Media Management ✦</span>
+      </div>
+    </div>
+
+    <!-- ABOUT -->
+    <section id="about">
+      <div class="container about-grid">
+
+        <div class="about-copy reveal">
+          <span class="eyebrow" style="color:#a47a2f">A little about me</span>
+
+          <h3>Technology with purpose. Operations with impact.</h3>
+
+          <p>
+            I am Monday Ojo Emmanuel, a Digital Operations and Web Solutions
+            professional with practical experience in website development,
+            CRM and contact management, sales operations, digital marketing,
+            administrative support and customer engagement.
+          </p>
+
+          <p>
+            My practical work includes developing the Caroluxe Collection
+            e-commerce website and working with HubSpot CRM to explore
+            contact management, customer communication, sales processes
+            and digital marketing workflows.
+          </p>
+
+          <p>
+            I enjoy solving problems, learning new technologies and making
+            digital tools easier for people and businesses to use.
+          </p>
+
+          <p>
+            I am open to remote opportunities, professional collaborations
+            and projects where I can contribute through technology,
+            communication and organised business support.
+          </p>
+        </div>
+
+        <div class="about-note reveal">
+          <h3>My Professional Approach</h3>
+          <p>
+            I believe good digital work is not just about having the right
+            tools. It is about understanding people's needs, communicating
+            clearly and delivering solutions that make a genuine difference.
+          </p>
+          <br>
+          <p>
+            My focus is on practical execution, continuous improvement,
+            reliability and creating better experiences for customers
+            and businesses.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="skills-section" id="skills">
+      <div class="container">
+
+        <div class="section-heading reveal">
+          <small>What I bring to the table</small>
+          <h2>Professional Expertise</h2>
+          <p>
+            A practical combination of digital, technical, operational
+            and customer-focused capabilities.
+          </p>
+        </div>
+
+        <div class="skills-grid">
+
+          <article class="skill-card reveal">
+            <div class="skill-icon">💻</div>
+            <h3>Web Development</h3>
+            <ul>
+              <li>HTML5</li>
+              <li>CSS3</li>
+              <li>JavaScript</li>
+              <li>Front-End Development</li>
+              <li>Responsive Web Design</li>
+              <li>Website Management</li>
+            </ul>
+          </article>
+
+          <article class="skill-card reveal">
+            <div class="skill-icon">⚙️</div>
+            <h3>CRM & Digital Operations</h3>
+            <ul>
+              <li>HubSpot CRM</li>
+              <li>Contact Management</li>
+              <li>Sales Operations</li>
+              <li>Digital Operations</li>
+              <li>Lead Management</li>
+              <li>Business Automation</li>
+            </ul>
+          </article>
+
+          <article class="skill-card reveal">
+            <div class="skill-icon">🤝</div>
+            <h3>Customer & Technical Support</h3>
+            <ul>
+              <li>Customer Support</li>
+              <li>Customer Communication</li>
+              <li>Technical Support Fundamentals</li>
+              <li>Problem-Solving</li>
+              <li>Troubleshooting</li>
+              <li>Customer Relationship Management</li>
+            </ul>
+          </article>
+
+          <article class="skill-card reveal">
+            <div class="skill-icon">📊</div>
+            <h3>Administrative Support</h3>
+            <ul>
+              <li>Virtual Assistance</li>
+              <li>Administrative Coordination</li>
+              <li>Microsoft Excel</li>
+              <li>Google Sheets</li>
+              <li>Microsoft Office</li>
+              <li>Record Management</li>
+            </ul>
+          </article>
+
+          <article class="skill-card reveal">
+            <div class="skill-icon">📱</div>
+            <h3>Digital Marketing & Social Media</h3>
+            <ul>
+              <li>Social Media Management</li>
+              <li>Digital Marketing</li>
+              <li>Email Marketing</li>
+              <li>Content Coordination</li>
+              <li>Community Engagement</li>
+              <li>Online Communication</li>
+            </ul>
+          </article>
+
+          <article class="skill-card reveal">
+            <div class="skill-icon">🔗</div>
+            <h3>Digital Tools & Collaboration</h3>
+            <ul>
+              <li>Slack</li>
+              <li>Microsoft Teams</li>
+              <li>Zendesk</li>
+              <li>Freshdesk</li>
+              <li>Zapier</li>
+              <li>HubSpot</li>
+            </ul>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="projects-section" id="projects">
+      <div class="container">
+
+        <div class="section-heading reveal">
+          <small>Selected practical work</small>
+          <h2>Projects & Experience</h2>
+          <p>
+            Real projects and practical demonstrations of my work
+            across web solutions, CRM, sales and digital operations.
+          </p>
+        </div>
+
+        <div class="projects-grid">
+
+          <article class="project-card reveal">
+            <div class="project-top">🛍️</div>
+            <div class="project-content">
+              <span class="project-tag">Web Development · E-commerce</span>
+              <h3>Caroluxe Collection</h3>
+              <p>
+                An e-commerce website developed with HTML, CSS,
+                JavaScript and HubSpot CMS to present products and
+                create a digital shopping experience.
+              </p>
+              <a class="project-link"
+                href="https://caroluxeluxury-148936139.hs-sites-eu1.com/caroluxe-collection-/-luxury-shopping"
+                target="_blank" rel="noopener noreferrer">
+                Visit Live Website ↗
+              </a>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-top">📈</div>
+            <div class="project-content">
+              <span class="project-tag">CRM · Sales · Digital Marketing</span>
+              <h3>HubSpot CRM & Digital Marketing</h3>
+              <p>
+                A practical project involving contact and company
+                records, deals, products, tickets, customer communication
+                and digital marketing activities.
+              </p>
+              <a class="project-link"
+                href="https://lnkd.in/p/eUQ6FERv"
+                target="_blank" rel="noopener noreferrer">
+                View LinkedIn Project ↗
+              </a>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-top">📋</div>
+            <div class="project-content">
+              <span class="project-tag">CRM · Administration · Operations</span>
+              <h3>CRM Contact Management & Sales Operations</h3>
+              <p>
+                A practical demonstration of contact management,
+                sales operations, digital operations and organised
+                administrative support.
+              </p>
+              <a class="project-link"
+                href="https://lnkd.in/p/eZBctsyM"
+                target="_blank" rel="noopener noreferrer">
+                View LinkedIn Project ↗
+              </a>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- LEARNING AND PROMOTIONAL SECTION -->
+    <section class="learning-section" id="learning">
+      <div class="container">
+
+        <div class="section-heading reveal">
+          <small>Learning & professional development</small>
+          <h2>Building Skills Through Learning</h2>
+          <p>
+            Continuous learning, practical application and professional
+            development are important parts of my journey.
+          </p>
+        </div>
+
+        <div class="learning-grid">
+
+          <article class="learning-card reveal">
+            <h3>Digital Witch Support Community</h3>
+            <p>
+              Professional training and development in digital marketing,
+              CRM, product management and business automation.
+              This community has contributed to my practical understanding
+              of digital business operations.
+            </p>
+            <a href="https://lnkd.in/p/eCNVrw-x"
+              target="_blank" rel="noopener noreferrer">
+              View My Digital Witch Certificate ↗
+            </a>
+          </article>
+
+          <article class="learning-card reveal">
+            <h3>Coursera · Google Technical Support Fundamentals</h3>
+            <p>
+              I am currently pursuing Google Technical Support Fundamentals
+              through Coursera, developing my understanding of technical
+              support, computer systems and troubleshooting.
+            </p>
+            <a href="https://www.coursera.org/learn/technical-support-fundamentals"
+              target="_blank" rel="noopener noreferrer">
+              Explore the Course ↗
+            </a>
+          </article>
+
+        </div>
+
+        <div class="learning-strip" aria-label="Learning and development">
+          <div class="learning-track">
+            <span>Digital Witch Support Community · Digital Skills & Development</span>
+            <span>Coursera · Google Technical Support Fundamentals</span>
+            <span>Continuous Learning · Practical Application</span>
+            <span>Digital Witch Support Community · Digital Skills & Development</span>
+            <span>Coursera · Google Technical Support Fundamentals</span>
+            <span>Continuous Learning · Practical Application</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section id="education">
+      <div class="container">
+
+        <div class="section-heading reveal">
+          <small>Academic background</small>
+          <h2>Education & Development</h2>
+          <p>
+            My educational background and ongoing professional development.
+          </p>
+        </div>
+
+        <div class="education-card reveal">
+
+          <div class="education-item">
+            <h3>Greater Heights Academy</h3>
+            <p>Secondary School Certificate</p>
+          </div>
+
+          <div class="education-item">
+            <h3>Digital Witch Support Community</h3>
+            <p>Completed professional training and certificate</p>
+          </div>
+
+          <div class="education-item">
+            <h3>Google Technical Support Fundamentals · Coursera</h3>
+            <p>Currently in progress</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact-section" id="contact">
+      <div class="container">
+
+        <div class="section-heading reveal">
+          <small>Let's work together</small>
+          <h2>Let's Connect</h2>
+          <p>
+            Interested in working together, discussing an opportunity
+            or exploring a professional collaboration? I would be glad
+            to hear from you.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+
+          <div class="contact-info reveal">
+            <h3>Get in Touch</h3>
+            <p>
+              Available for relevant remote opportunities,
+              collaborations and professional conversations.
+            </p>
+
+            <div class="contact-detail">
+              <strong>Location</strong>
+              Akure, Ondo State, Nigeria
+            </div>
+
+            <div class="contact-detail">
+              <strong>Email</strong>
+              <a href="mailto:mondayojoemmanuel350@gmail.com">
+                mondayojoemmanuel350@gmail.com
+              </a>
+            </div>
+
+            <div class="contact-detail">
+              <strong>Phone / WhatsApp</strong>
+              <a href="https://wa.me/2349164236409"
+                target="_blank" rel="noopener noreferrer">
+                +234 916 423 6409
+              </a>
+            </div>
+
+            <div class="contact-detail">
+              <strong>LinkedIn</strong>
+              <a href="https://www.linkedin.com/in/monday-ojo-emmanuel-b95439423/"
+                target="_blank" rel="noopener noreferrer">
+                Visit My Professional Profile ↗
+              </a>
+            </div>
+
+            <div class="contact-detail">
+              <strong>GitHub</strong>
+              <a href="https://github.com/MOE-coder-lab"
+                target="_blank" rel="noopener noreferrer">
+                Explore My GitHub ↗
+              </a>
+            </div>
+          </div>
+
+          <form class="contact-form reveal" id="contactForm">
+            <h3>Send Me a Message</h3>
+
+            <input type="text" id="visitorName"
+              placeholder="Your full name" required>
+
+            <input type="email" id="visitorEmail"
+              placeholder="Your email address" required>
+
+            <input type="text" id="visitorSubject"
+              placeholder="Subject" required>
+
+            <textarea id="visitorMessage"
+              placeholder="Write your message here..."
+              required></textarea>
+
+            <button type="submit" class="btn btn-gold">
+              Prepare Email Message ↗
+            </button>
+
+            <p class="form-message" id="formMessage"
+              aria-live="polite">
+              Your email application will open with your message prepared.
+            </p>
+          </form>
+
+        </div>
+
+        <!-- LIVE GITHUB API -->
+        <div class="github-panel reveal">
+          <h3>My GitHub Development Profile</h3>
+          <p style="font-size:12px;color:#6c7889;margin-top:5px">
+            Public repository information retrieved through the GitHub API.
+          </p>
+
+          <div class="github-stats">
+            <div class="stat">
+              <strong id="repoCount">—</strong>
+              <span>Public Repositories</span>
+            </div>
+
+            <div class="stat">
+              <strong id="followerCount">—</strong>
+              <span>Followers</span>
+            </div>
+          </div>
+
+          <a href="https://github.com/MOE-coder-lab"
+            target="_blank" rel="noopener noreferrer"
+            class="project-link">
+            Explore My GitHub Profile ↗
+          </a>
+
+          <p id="apiStatus"
+            style="font-size:11px;color:#6c7889;margin-top:12px"
+            aria-live="polite">
+            Connecting to GitHub...
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p><strong>Monday Ojo Emmanuel</strong></p>
+    <p>Digital Operations · Web Solutions · CRM & Customer Support</p>
+
+    <div class="footer-links">
+      <a href="https://www.linkedin.com/in/monday-ojo-emmanuel-b95439423/"
+        target="_blank" rel="noopener noreferrer">LinkedIn</a>
+
+      <a href="https://github.com/MOE-coder-lab"
+        target="_blank" rel="noopener noreferrer">GitHub</a>
+
+      <a href="mailto:mondayojoemmanuel350@gmail.com">Email</a>
+
+      <a href="https://wa.me/2349164236409"
+        target="_blank" rel="noopener noreferrer">WhatsApp</a>
+    </div>
+
+    <p>© <span id="currentYear"></span> Monday Ojo Emmanuel. All rights reserved.</p>
+    <p>Designed with purpose, professionalism and attention to detail.</p>
+  </footer>
+
+  <script>
+    // MOBILE NAVIGATION
+
+    const menuToggle = document.getElementById("menuToggle");
+    const navLinks = document.getElementById("navLinks");
+
+    menuToggle.addEventListener("click", () => {
+      const isOpen = navLinks.classList.toggle("active");
+      menuToggle.setAttribute("aria-expanded", String(isOpen));
+      menuToggle.textContent = isOpen ? "✕" : "☰";
+    });
+
+    document.querySelectorAll(".nav-links a").forEach(link => {
+      link.addEventListener("click", () => {
+        navLinks.classList.remove("active");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.textContent = "☰";
+      });
+    });
+
+    // AUTOMATIC COPYRIGHT YEAR
+
+    document.getElementById("currentYear").textContent =
+      new Date().getFullYear();
+
+    // GENTLE SCROLL ANIMATIONS
+
+    const revealItems = document.querySelectorAll(".reveal");
+
+    if ("IntersectionObserver" in window) {
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      }, {
+        threshold: 0.12
+      });
+
+      revealItems.forEach(item => observer.observe(item));
+    } else {
+      revealItems.forEach(item => item.classList.add("visible"));
+    }
+
+    // CONTACT FORM - EMAIL PREPARATION
+
+    const contactForm = document.getElementById("contactForm");
+    const formMessage = document.getElementById("formMessage");
+
+    contactForm.addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      const name = document.getElementById("visitorName").value.trim();
+      const email = document.getElementById("visitorEmail").value.trim();
+      const subject = document.getElementById("visitorSubject").value.trim();
+      const message = document.getElementById("visitorMessage").value.trim();
+
+      if (!name || !email || !subject || !message) {
+        formMessage.textContent = "Please complete all fields.";
+        return;
+      }
+
+      const recipient = "mondayojoemmanuel350@gmail.com";
+
+      const body =
+        "Name: " + name + "\n" +
+        "Email: " + email + "\n\n" +
+        "Message:\n" + message;
+
+      const mailto =
+        "mailto:" + recipient +
+        "?subject=" + encodeURIComponent(subject) +
+        "&body=" + encodeURIComponent(body);
+
+      formMessage.textContent =
+        "Opening your email application...";
+
+      window.location.href = mailto;
+    });
+
+    // GITHUB PUBLIC API INTEGRATION
+
+    async function loadGitHubData() {
+      const repoCount = document.getElementById("repoCount");
+      const followerCount = document.getElementById("followerCount");
+      const apiStatus = document.getElementById("apiStatus");
+
+      try {
+        const response = await fetch(
+          "https://api.github.com/users/MOE-coder-lab",
+          {
+            headers: {
+              "Accept": "application/vnd.github+json"
+            }
+          }
+        );
+
+        if (!response.ok) {
+          throw new Error("GitHub profile unavailable");
+        }
+
+        const data = await response.json();
+
+        repoCount.textContent = data.public_repos ?? "—";
+        followerCount.textContent = data.followers ?? "—";
+
+        apiStatus.textContent =
+          "Public profile information successfully retrieved.";
+
+      } catch (error) {
+        repoCount.textContent = "—";
+        followerCount.textContent = "—";
+
+        apiStatus.textContent =
+          "GitHub statistics are temporarily unavailable. Visit my GitHub profile directly.";
+      }
+    }
+
+    loadGitHubData();
+  </script>
+
+</body>
+</html>
