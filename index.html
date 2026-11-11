@@ -4,21 +4,548 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My First Website</title>
+    <meta name="description" content="Monday Ojo Emmanuel - Frontend Developer, CRM and Digital Operations Professional, and Virtual Administrative Assistant based in Nigeria, available for remote opportunities worldwide.">
+    <meta name="author" content="Monday Ojo Emmanuel">
+    <meta name="theme-color" content="#10182f">
+
+    <title>Monday Ojo Emmanuel | Frontend Developer & Digital Operations Professional</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-    <h1>Welcome to My First Website!</h1>
+<header class="header">
+    <nav class="navbar">
+        <a href="#home" class="logo">MOE<span>.</span></a>
 
-    <p>Hello! My name is Monday.</p>
+        <button class="menu-toggle" id="menuToggle"
+            aria-label="Open navigation" aria-expanded="false">☰</button>
 
-    <p>I am learning HTML, CSS and JavaScript.</p>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#expertise">Expertise</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#certifications">Certifications</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
 
-    <button onclick="welcomeUser()">
-    Contact Me
-</button>
+<main>
+
+<!-- HERO SECTION -->
+
+<section class="hero" id="home">
+
+    <div class="hero-content">
+        <div class="availability">
+            <span class="availability-dot"></span>
+            OPEN TO INTERNATIONAL REMOTE OPPORTUNITIES
+        </div>
+
+        <p class="eyebrow">HELLO, WELCOME TO MY PORTFOLIO</p>
+
+        <h1>
+            Monday Ojo<br>
+            <span>Emmanuel.</span>
+        </h1>
+
+        <h2>
+            Frontend Developer <span class="separator">|</span>
+            CRM & Digital Operations Professional
+        </h2>
+
+        <p class="hero-description">
+            I combine technology, organisation and creativity to build
+            digital experiences, support business operations, manage
+            customer relationships and help businesses work smarter.
+        </p>
+
+        <div class="hero-buttons">
+            <a href="#projects" class="btn btn-primary">Explore My Projects ↗</a>
+            <a href="#contact" class="btn btn-outline">Let's Connect</a>
+        </div>
+
+        <div class="hero-socials">
+            <a href="https://www.linkedin.com/in/monday-ojo-emmanuel-b95439423/"
+               target="_blank" rel="noopener">LinkedIn ↗</a>
+
+            <a href="https://github.com/MOE-coder-lab"
+               target="_blank" rel="noopener">GitHub ↗</a>
+        </div>
+    </div>
+
+    <div class="hero-visual">
+        <div class="image-glow"></div>
+
+        <div class="profile-frame">
+            <img
+                src="https://mondayvirtualadministrativeassistant.netlify.app/assets/monday-profile.png"
+                alt="Professional portrait of Monday Ojo Emmanuel"
+                class="profile-image">
+        </div>
+
+        <div class="floating-card card-top">
+            <span>✦</span> Technology & Innovation
+        </div>
+
+        <div class="floating-card card-bottom">
+            <span>✓</span> Business-Focused Solutions
+        </div>
+    </div>
+
+</section>
+
+<!-- TRUST STRIP -->
+
+<section class="trust-strip">
+    <div>FRONTEND DEVELOPMENT</div>
+    <div>CRM MANAGEMENT</div>
+    <div>DIGITAL OPERATIONS</div>
+    <div>ADMINISTRATIVE SUPPORT</div>
+</section>
+
+<!-- ABOUT SECTION -->
+
+<section class="section about-section" id="about">
+
+    <div class="section-heading">
+        <span class="section-tag">MY BACKGROUND</span>
+        <h2>Technology meets <span>business efficiency.</span></h2>
+    </div>
+
+    <div class="about-content">
+        <div class="about-main">
+            <p>
+                I am Monday Ojo Emmanuel, a technology-oriented professional
+                with practical experience building digital projects and
+                developing skills across frontend development, CRM management,
+                digital operations and administrative support.
+            </p>
+
+            <p>
+                I have built the Caroluxe Collection shopping website using
+                HTML, CSS and JavaScript, and developed practical HubSpot CRM
+                and digital operations projects. These experiences have
+                strengthened my understanding of digital business solutions,
+                customer relationship management and organised workflows.
+            </p>
+
+            <p>
+                I also bring an interest in technical support, digital
+                marketing, business automation and customer experience.
+                I enjoy learning, solving problems and helping businesses
+                turn ideas into organised, practical digital solutions.
+            </p>
+
+            <p class="about-highlight">
+                My goal is to contribute meaningfully to ambitious teams,
+                growing businesses and organisations through technology,
+                reliability, creativity and effective communication.
+            </p>
+        </div>
+
+        <div class="about-stats">
+            <div class="stat-card">
+                <strong>01</strong>
+                <span>Business Website Project</span>
+            </div>
+
+            <div class="stat-card">
+                <strong>CRM</strong>
+                <span>Practical CRM Projects</span>
+            </div>
+
+            <div class="stat-card">
+                <strong>3+</strong>
+                <span>Core Technology Skills</span>
+            </div>
+
+            <div class="stat-card">
+                <strong>Global</strong>
+                <span>Remote Opportunity Focus</span>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<!-- EXPERTISE SECTION -->
+
+<section class="section expertise-section" id="expertise">
+
+    <div class="section-heading">
+        <span class="section-tag">WHAT I CAN CONTRIBUTE</span>
+        <h2>Professional <span>Expertise</span></h2>
+        <p>
+            A combination of digital, technical and operational capabilities.
+        </p>
+    </div>
+
+    <div class="expertise-grid">
+
+        <article class="expertise-card">
+            <div class="expertise-icon">💻</div>
+            <h3>Frontend Development</h3>
+            <p>
+                Building responsive website interfaces and practical
+                digital experiences.
+            </p>
+            <div class="tags">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+                <span>Responsive Design</span>
+            </div>
+        </article>
+
+        <article class="expertise-card">
+            <div class="expertise-icon">📊</div>
+            <h3>CRM & Sales Operations</h3>
+            <p>
+                Organising customer records, managing CRM information
+                and supporting sales workflows.
+            </p>
+            <div class="tags">
+                <span>HubSpot</span>
+                <span>Contact Management</span>
+                <span>Deals</span>
+                <span>Tickets</span>
+            </div>
+        </article>
+
+        <article class="expertise-card">
+            <div class="expertise-icon">⚙️</div>
+            <h3>Digital Operations</h3>
+            <p>
+                Supporting organised business processes, digital workflows
+                and operational coordination.
+            </p>
+            <div class="tags">
+                <span>Business Automation</span>
+                <span>Digital Workflows</span>
+                <span>CRM</span>
+            </div>
+        </article>
+
+        <article class="expertise-card">
+            <div class="expertise-icon">🗂️</div>
+            <h3>Virtual & Administrative Support</h3>
+            <p>
+                Supporting communication, documentation, scheduling,
+                coordination and everyday administrative tasks.
+            </p>
+            <div class="tags">
+                <span>Google Workspace</span>
+                <span>Microsoft Office</span>
+                <span>Coordination</span>
+                <span>Data Organisation</span>
+            </div>
+        </article>
+
+        <article class="expertise-card">
+            <div class="expertise-icon">🎧</div>
+            <h3>Customer & Technical Support</h3>
+            <p>
+                Helping customers understand solutions, addressing
+                concerns and developing technical troubleshooting skills.
+            </p>
+            <div class="tags">
+                <span>Customer Support</span>
+                <span>Communication</span>
+                <span>Troubleshooting</span>
+            </div>
+        </article>
+
+        <article class="expertise-card">
+            <div class="expertise-icon">📣</div>
+            <h3>Digital Marketing & Communication</h3>
+            <p>
+                Developing knowledge of online promotion, customer
+                engagement and digital communication.
+            </p>
+            <div class="tags">
+                <span>Email Marketing</span>
+                <span>Digital Marketing</span>
+                <span>Content Coordination</span>
+            </div>
+        </article>
+
+    </div>
+
+</section>
+
+<!-- TOOLS SECTION -->
+
+<section class="section tools-section">
+    <div class="section-heading">
+        <span class="section-tag">MY DIGITAL TOOLKIT</span>
+        <h2>Tools & <span>Technologies</span></h2>
+    </div>
+
+    <div class="tools-grid">
+        <span>HTML5</span>
+        <span>CSS3</span>
+        <span>JavaScript</span>
+        <span>GitHub</span>
+        <span>HubSpot CRM</span>
+        <span>Google Sheets</span>
+        <span>Microsoft Excel</span>
+        <span>Microsoft Teams</span>
+        <span>Slack</span>
+        <span>Zapier</span>
+        <span>Zendesk</span>
+        <span>Freshdesk</span>
+    </div>
+</section>
+
+<!-- PROJECTS SECTION -->
+
+<section class="section projects-section" id="projects">
+
+    <div class="section-heading">
+        <span class="section-tag">SELECTED WORK</span>
+        <h2>Projects that demonstrate <span>my capabilities.</span></h2>
+        <p>
+            Practical projects showcasing website development,
+            CRM management and digital business operations.
+        </p>
+    </div>
+
+    <div class="projects-grid">
+
+        <article class="project-card featured-project">
+            <div class="project-number">01 / WEBSITE DEVELOPMENT</div>
+            <div class="project-icon">🛍️</div>
+            <h3>Caroluxe Collection</h3>
+            <p>
+                Designed and developed a luxury shopping website project
+                using HTML, CSS and JavaScript, featuring product
+                presentation and an e-commerce shopping experience.
+            </p>
+            <div class="tags">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+                <span>E-commerce</span>
+            </div>
+            <a class="project-link"
+               href="https://caroluxeluxury-148936139.hs-sites-eu1.com/caroluxe-collection-/-luxury-shopping"
+               target="_blank" rel="noopener">
+                Explore Caroluxe Collection ↗
+            </a>
+        </article>
+
+        <article class="project-card">
+            <div class="project-number">02 / CRM & DIGITAL MARKETING</div>
+            <div class="project-icon">📈</div>
+            <h3>HubSpot CRM & Digital Marketing</h3>
+            <p>
+                Hands-on project involving contact and company records,
+                deals, products, tickets, website and landing-page
+                development, and customer communication activities.
+            </p>
+            <div class="tags">
+                <span>HubSpot CRM</span>
+                <span>Marketing</span>
+                <span>Customer Records</span>
+            </div>
+            <a class="project-link"
+               href="https://lnkd.in/p/eUQ6FERv"
+               target="_blank" rel="noopener">
+                View HubSpot Project ↗
+            </a>
+        </article>
+
+        <article class="project-card">
+            <div class="project-number">03 / SALES & DIGITAL OPERATIONS</div>
+            <div class="project-icon">⚙️</div>
+            <h3>CRM Contact Management & Sales Operations</h3>
+            <p>
+                Practical project demonstrating contact management,
+                customer information organisation, sales operations
+                and digital business processes.
+            </p>
+            <div class="tags">
+                <span>CRM</span>
+                <span>Sales Operations</span>
+                <span>Digital Operations</span>
+            </div>
+            <a class="project-link"
+               href="https://lnkd.in/p/eZBctsyM"
+               target="_blank" rel="noopener">
+                View CRM Project ↗
+            </a>
+        </article>
+
+        <article class="project-card">
+            <div class="project-number">04 / ADMINISTRATIVE SUPPORT</div>
+            <div class="project-icon">🗂️</div>
+            <h3>Virtual Assistant & Administrative Support</h3>
+            <p>
+                Practical administrative capabilities covering
+                digital communication, training announcements,
+                participant coordination, online group management
+                and information organisation.
+            </p>
+            <div class="tags">
+                <span>Virtual Assistance</span>
+                <span>Coordination</span>
+                <span>Communication</span>
+            </div>
+            <a class="project-link"
+               href="https://www.linkedin.com/in/monday-ojo-emmanuel-b95439423/"
+               target="_blank" rel="noopener">
+                Connect on LinkedIn ↗
+            </a>
+        </article>
+
+        <article class="project-card">
+            <div class="project-number">05 / WEB DEVELOPMENT</div>
+            <div class="project-icon">⌨️</div>
+            <h3>GitHub Website Portfolio</h3>
+            <p>
+                My website development repository, showcasing
+                foundational frontend development skills through
+                HTML, CSS and JavaScript.
+            </p>
+            <div class="tags">
+                <span>GitHub</span>
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+            </div>
+            <a class="project-link"
+               href="https://github.com/MOE-coder-lab"
+               target="_blank" rel="noopener">
+                Explore GitHub ↗
+            </a>
+        </article>
+
+    </div>
+
+</section>
+
+<!-- CERTIFICATIONS -->
+
+<section class="section certifications-section" id="certifications">
+
+    <div class="section-heading">
+        <span class="section-tag">CONTINUOUS DEVELOPMENT</span>
+        <h2>Training & <span>Certifications</span></h2>
+    </div>
+
+    <div class="certificate-grid">
+
+        <article class="certificate-card">
+            <div class="certificate-icon">🏅</div>
+            <h3>Digital Witch Support Community</h3>
+            <p>
+                Completed professional training covering digital
+                marketing, CRM, product management and business automation.
+            </p>
+            <a href="https://lnkd.in/p/eCNVrw-x"
+               target="_blank" rel="noopener">
+                View Certificate ↗
+            </a>
+        </article>
+
+        <article class="certificate-card">
+            <div class="certificate-icon">🎓</div>
+            <h3>Google Technical Support Fundamentals</h3>
+            <p>
+                Currently pursuing technical support fundamentals
+                through Google on Coursera.
+            </p>
+            <span class="learning-status">IN PROGRESS</span>
+        </article>
+
+    </div>
+
+</section>
+
+<!-- CALL TO ACTION -->
+
+<section class="cta-section">
+    <p class="section-tag">LET'S BUILD SOMETHING MEANINGFUL</p>
+    <h2>Looking for someone who combines technology with business thinking?</h2>
+    <p>
+        I welcome opportunities to contribute to innovative teams,
+        growing companies and international remote projects.
+    </p>
+    <a href="mailto:mondayojoemmanuel350@gmail.com"
+       class="btn btn-primary">
+        Let's Discuss an Opportunity ↗
+    </a>
+</section>
+
+<!-- CONTACT -->
+
+<section class="section contact-section" id="contact">
+
+    <div class="section-heading">
+        <span class="section-tag">GET IN TOUCH</span>
+        <h2>Let's <span>Connect.</span></h2>
+        <p>I'd be glad to hear about opportunities and collaborations.</p>
+    </div>
+
+    <div class="contact-grid">
+
+        <div class="contact-item">
+            <span>✉️</span>
+            <h3>Email</h3>
+            <a href="mailto:mondayojoemmanuel350@gmail.com">
+                mondayojoemmanuel350@gmail.com
+            </a>
+        </div>
+
+        <div class="contact-item">
+            <span>📞</span>
+            <h3>Phone / WhatsApp</h3>
+            <a href="https://wa.me/2349164236409"
+               target="_blank" rel="noopener">
+                +234 916 423 6409
+            </a>
+        </div>
+
+        <div class="contact-item">
+            <span>📍</span>
+            <h3>Location</h3>
+            <p>Akure, Ondo State, Nigeria</p>
+        </div>
+
+        <div class="contact-item">
+            <span>🌐</span>
+            <h3>LinkedIn</h3>
+            <a href="https://www.linkedin.com/in/monday-ojo-emmanuel-b95439423/"
+               target="_blank" rel="noopener">
+                Professional Profile ↗
+            </a>
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+<footer class="footer">
+    <a href="#home" class="logo">MOE<span>.</span></a>
+    <p>Monday Ojo Emmanuel | Frontend Developer & Digital Operations Professional</p>
+    <p>Akure, Nigeria · Available for International Remote Opportunities</p>
+    <p class="copyright">
+        © <span id="year"></span> Monday Ojo Emmanuel. All Rights Reserved.
+    </p>
+</footer>
+
+<script src="script.js"></script>
 
 </body>
 </html>
-<script src="script.js"></script>
+
