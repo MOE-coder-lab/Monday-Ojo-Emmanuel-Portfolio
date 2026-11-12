@@ -1,0 +1,1347 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#101d36">
+
+<title>Monday Ojo Emmanuel | M.O.E. | Digital Operations & Frontend Development</title>
+
+<meta name="description" content="Monday Ojo Emmanuel - CRM and Digital Operations, Frontend Development, Virtual Assistance, Administrative Support and Customer Experience. Explore practical projects and professional capabilities.">
+
+<meta name="author" content="Monday Ojo Emmanuel">
+
+<style>
+:root {
+  --navy: #101d36;
+  --navy2: #172947;
+  --gold: #e6b957;
+  --white: #ffffff;
+  --teal: #168f88;
+  --light: #f4f7fb;
+  --text: #26354a;
+  --muted: #69778a;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text);
+  background: var(--light);
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  font: inherit;
+}
+
+.container {
+  width: min(1120px, 90%);
+  margin: auto;
+}
+
+nav {
+  background: var(--navy);
+  color: white;
+  padding: 17px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid rgba(230,185,87,.3);
+}
+
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: 900;
+  color: var(--gold);
+  letter-spacing: 2px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 22px;
+  align-items: center;
+  font-size: 13px;
+}
+
+.nav-links a:hover {
+  color: var(--gold);
+}
+
+.menu-toggle {
+  display: none;
+  color: white;
+  background: transparent;
+  border: 0;
+  font-size: 26px;
+  cursor: pointer;
+}
+
+.hero {
+  background:
+    radial-gradient(circle at 90% 10%, rgba(22,143,136,.2), transparent 30%),
+    linear-gradient(130deg, #101d36, #1a3153);
+  color: white;
+  padding: 95px 0 85px;
+  position: relative;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  align-items: center;
+  gap: 55px;
+}
+
+.eyebrow {
+  color: var(--gold);
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+
+.hero h1 {
+  font-size: clamp(36px, 5vw, 61px);
+  line-height: 1.12;
+  margin-bottom: 15px;
+}
+
+.hero h1 span {
+  color: var(--gold);
+}
+
+.hero h2 {
+  color: #c7d5e7;
+  font-size: clamp(15px, 2vw, 19px);
+  font-weight: 500;
+  margin-bottom: 23px;
+}
+
+.hero-description {
+  color: #d4deeb;
+  max-width: 610px;
+  font-size: 15px;
+  margin-bottom: 28px;
+}
+
+.hero-image {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.profile-frame {
+  width: 300px;
+  height: 340px;
+  border: 3px solid var(--gold);
+  border-radius: 145px 145px 28px 28px;
+  padding: 9px;
+  position: relative;
+  background: rgba(255,255,255,.06);
+  box-shadow: 0 15px 60px rgba(0,0,0,.3);
+}
+
+.profile-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 140px 140px 20px 20px;
+}
+
+.photo-note {
+  position: absolute;
+  bottom: -15px;
+  right: -15px;
+  background: var(--teal);
+  padding: 11px 17px;
+  border-radius: 9px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 13px;
+}
+
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 13px 22px;
+  border-radius: 7px;
+  font-size: 13px;
+  font-weight: bold;
+  transition: .3s;
+}
+
+.btn:hover {
+  transform: translateY(-4px);
+}
+
+.btn-gold {
+  background: var(--gold);
+  color: var(--navy);
+}
+
+.btn-outline {
+  border: 1px solid rgba(255,255,255,.6);
+  color: white;
+}
+
+.btn-teal {
+  background: var(--teal);
+  color: white;
+}
+
+.btn-dark {
+  background: var(--navy);
+  color: white;
+}
+
+.identity {
+  padding: 19px 0;
+  background: var(--gold);
+  color: var(--navy);
+  text-align: center;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.ticker-section {
+  overflow: hidden;
+  background: var(--navy2);
+  padding: 19px 0;
+  color: white;
+}
+
+.ticker {
+  display: flex;
+  width: max-content;
+  animation: moveLeft 38s linear infinite;
+}
+
+.ticker:hover {
+  animation-play-state: paused;
+}
+
+.ticker span {
+  padding: 0 28px;
+  white-space: nowrap;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.ticker span::after {
+  content: " ✦";
+  color: var(--gold);
+  margin-left: 22px;
+}
+
+@keyframes moveLeft {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+section {
+  padding: 85px 0;
+}
+
+.section-heading {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 43px;
+}
+
+.section-heading small {
+  color: var(--teal);
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.section-heading h2 {
+  font-size: clamp(27px, 4vw, 39px);
+  color: var(--navy);
+  margin: 9px 0;
+}
+
+.section-heading p {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.1fr .9fr;
+  gap: 35px;
+  align-items: center;
+}
+
+.about-text h3 {
+  color: var(--navy);
+  font-size: 25px;
+  margin-bottom: 15px;
+}
+
+.about-text p {
+  color: var(--muted);
+  font-size: 15px;
+  margin-bottom: 15px;
+}
+
+.about-card {
+  background: var(--navy);
+  color: white;
+  padding: 33px;
+  border-radius: 15px;
+  border-bottom: 5px solid var(--gold);
+}
+
+.about-card h3 {
+  color: var(--gold);
+  margin-bottom: 14px;
+}
+
+.about-card p {
+  color: #d4deeb;
+  font-size: 14px;
+}
+
+.skills-section {
+  background: white;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 19px;
+}
+
+.skill-card {
+  background: var(--light);
+  padding: 25px;
+  border-radius: 12px;
+  border: 1px solid #e4eaf1;
+  transition: .3s;
+}
+
+.skill-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--gold);
+}
+
+.skill-icon {
+  font-size: 27px;
+  margin-bottom: 12px;
+}
+
+.skill-card h3 {
+  color: var(--navy);
+  font-size: 17px;
+  margin-bottom: 8px;
+}
+
+.skill-card p {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.project-card {
+  background: white;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 5px 25px rgba(16,29,54,.06);
+  border: 1px solid #e8edf3;
+  transition: .3s;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+}
+
+.project-top {
+  min-height: 145px;
+  padding: 28px;
+  background: linear-gradient(135deg, var(--navy), var(--navy2));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gold);
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.project-content {
+  padding: 26px;
+}
+
+.project-content h3 {
+  color: var(--navy);
+  margin-bottom: 9px;
+  font-size: 19px;
+}
+
+.project-content p {
+  color: var(--muted);
+  font-size: 14px;
+  margin-bottom: 18px;
+}
+
+.project-tag {
+  display: inline-block;
+  background: #e9f5f3;
+  color: var(--teal);
+  padding: 5px 10px;
+  border-radius: 30px;
+  font-size: 11px;
+  font-weight: bold;
+  margin: 3px 3px 12px 0;
+}
+
+.training-section {
+  background: var(--navy);
+  color: white;
+}
+
+.training-section .section-heading h2 {
+  color: white;
+}
+
+.training-section .section-heading p {
+  color: #c5d2e1;
+}
+
+.training-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+}
+
+.training-card {
+  padding: 28px;
+  border: 1px solid rgba(255,255,255,.17);
+  background: rgba(255,255,255,.06);
+  border-radius: 14px;
+  transition: .3s;
+}
+
+.training-card:hover {
+  border-color: var(--gold);
+  transform: translateY(-5px);
+}
+
+.training-card img {
+  max-width: 145px;
+  max-height: 75px;
+  object-fit: contain;
+  background: white;
+  padding: 7px;
+  border-radius: 7px;
+  margin-bottom: 18px;
+}
+
+.training-card h3 {
+  color: var(--gold);
+  margin-bottom: 10px;
+}
+
+.training-card p {
+  font-size: 14px;
+  color: #d0dbea;
+  margin-bottom: 18px;
+}
+
+.training-card a {
+  color: var(--gold);
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.career-message {
+  background: linear-gradient(120deg, #e6b957, #f6d98f);
+  padding: 48px 30px;
+  text-align: center;
+  border-radius: 15px;
+  color: var(--navy);
+}
+
+.career-message h2 {
+  font-size: clamp(25px, 4vw, 35px);
+  margin-bottom: 12px;
+}
+
+.career-message p {
+  max-width: 700px;
+  margin: 0 auto 23px;
+  font-size: 14px;
+}
+
+.contact-section {
+  background: white;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.contact-info {
+  background: var(--navy);
+  color: white;
+  padding: 32px;
+  border-radius: 14px;
+}
+
+.contact-info h3 {
+  color: var(--gold);
+  font-size: 23px;
+  margin-bottom: 15px;
+}
+
+.contact-info p {
+  color: #d4deeb;
+  font-size: 14px;
+  margin-bottom: 18px;
+}
+
+.contact-item {
+  padding: 13px 0;
+  border-bottom: 1px solid rgba(255,255,255,.15);
+  font-size: 13px;
+}
+
+.contact-item a {
+  color: var(--gold);
+  overflow-wrap: anywhere;
+}
+
+.contact-action {
+  padding: 30px;
+  border: 1px solid #e3eaf0;
+  border-radius: 14px;
+}
+
+.contact-action h3 {
+  color: var(--navy);
+  margin-bottom: 12px;
+}
+
+.contact-action p {
+  color: var(--muted);
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+footer {
+  background: #0a1428;
+  color: #d2dce8;
+  padding: 35px 0;
+  text-align: center;
+  font-size: 12px;
+}
+
+footer strong {
+  color: var(--gold);
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 19px;
+  margin: 17px 0;
+}
+
+.footer-links a:hover {
+  color: var(--gold);
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(25px);
+  transition: opacity .8s ease, transform .8s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media(max-width: 800px) {
+  .hero-grid,
+  .about-grid,
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    padding: 65px 0;
+  }
+
+  .hero-image {
+    margin-top: 30px;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 65px;
+    left: 0;
+    width: 100%;
+    background: var(--navy);
+    flex-direction: column;
+    padding: 25px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
+
+@media(max-width: 550px) {
+  section {
+    padding: 60px 0;
+  }
+
+  .skills-grid,
+  .projects-grid,
+  .training-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-frame {
+    width: 255px;
+    height: 295px;
+  }
+
+  .hero h1 {
+    font-size: 38px;
+  }
+
+  .buttons .btn {
+    width: 100%;
+  }
+}
+
+@media(prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    transition-duration: .01ms !important;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <div class="container nav-inner">
+    <a href="#home" class="logo">M.O.E.</a>
+
+    <button class="menu-toggle" id="menuToggle"
+      aria-label="Open navigation" aria-expanded="false">☰</button>
+
+    <div class="nav-links" id="navLinks">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#training">Training</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="home">
+  <div class="container hero-grid">
+
+    <div>
+      <div class="eyebrow">Professional Portfolio · M.O.E.</div>
+
+      <h1>
+        Monday Ojo <span>Emmanuel</span>
+      </h1>
+
+      <h2>
+        CRM & Digital Operations | Frontend Development |
+        Virtual & Administrative Support
+      </h2>
+
+      <p class="hero-description">
+        I believe that meaningful work begins with understanding
+        people's needs, finding practical solutions and making
+        technology work better for businesses and the people
+        they serve.
+
+        Through hands-on projects, digital training and continuous
+        development, I am building the skills to support business
+        operations, customer experiences and digital solutions.
+      </p>
+
+      <div class="buttons">
+        <a href="#projects" class="btn btn-gold">Explore My Projects</a>
+
+        <a href="mailto:mondayojoemmanuel350@gmail.com"
+          class="btn btn-outline">Let's Connect</a>
+
+        <a href="https://www.linkedin.com/in/monday-ojo-emmanuel-b95439423/"
+          target="_blank" rel="noopener noreferrer"
+          class="btn btn-outline">LinkedIn Profile</a>
+      </div>
+    </div>
+
+    <div class="hero-image">
+      <div class="profile-frame">
+        <img src="profile.jpg"
+          alt="Professional photograph of Monday Ojo Emmanuel"
+          onerror="this.style.opacity='.15'; this.alt='Upload your professional photo as profile.jpg';">
+
+        <div class="photo-note">M.O.E. · Professional Profile</div>
+      </div>
+    </div>
+
+  </div>
+</header>
+
+<div class="identity">
+  MONDAY OJO EMMANUEL · M.O.E. · AKURE, ONDO STATE, NIGERIA
+</div>
+
+<div class="ticker-section">
+  <div class="ticker">
+    <span>CRM CONTACT MANAGEMENT</span>
+    <span>FRONTEND DEVELOPMENT</span>
+    <span>SALES OPERATIONS</span>
+    <span>VIRTUAL ASSISTANCE</span>
+    <span>ADMINISTRATIVE SUPPORT</span>
+    <span>CUSTOMER SUPPORT</span>
+    <span>COMMUNITY ENGAGEMENT</span>
+    <span>DIGITAL OPERATIONS</span>
+    <span>SOCIAL MEDIA MANAGEMENT</span>
+    <span>CRM CONTACT MANAGEMENT</span>
+    <span>FRONTEND DEVELOPMENT</span>
+    <span>SALES OPERATIONS</span>
+    <span>VIRTUAL ASSISTANCE</span>
+    <span>ADMINISTRATIVE SUPPORT</span>
+    <span>CUSTOMER SUPPORT</span>
+    <span>COMMUNITY ENGAGEMENT</span>
+    <span>DIGITAL OPERATIONS</span>
+    <span>SOCIAL MEDIA MANAGEMENT</span>
+  </div>
+</div>
+
+<section id="about">
+  <div class="container about-grid reveal">
+
+    <div class="about-text">
+      <div class="eyebrow">A little about me</div>
+
+      <h3>Building skills with purpose. Creating solutions with intention.</h3>
+
+      <p>
+        My professional journey is shaped by curiosity,
+        determination and a genuine interest in technology,
+        business operations and helping people.
+      </p>
+
+      <p>
+        I have developed practical experience through CRM
+        exercises, digital operations activities and building
+        the Caroluxe Collection website using HTML, CSS
+        and JavaScript.
+      </p>
+
+      <p>
+        I am interested in opportunities where I can contribute
+        to organised operations, effective customer communication,
+        digital project support and useful frontend solutions.
+      </p>
+
+      <p>
+        I value honesty, continuous learning, responsibility,
+        thoughtful communication and delivering work that
+        makes a meaningful difference.
+      </p>
+
+      <a href="https://www.linkedin.com/in/monday-ojo-emmanuel-b95439423/"
+        target="_blank" rel="noopener noreferrer"
+        class="btn btn-dark">Connect on LinkedIn</a>
+    </div>
+
+    <div class="about-card">
+      <h3>My professional philosophy</h3>
+
+      <p>
+        Good technology should make work easier.
+        Good administration should bring clarity.
+        Good customer support should make people feel heard.
+        And good digital operations should help businesses
+        move forward.
+      </p>
+
+      <br>
+
+      <p>
+        I am committed to combining these principles
+        with practical skills, professionalism and
+        a willingness to keep improving.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<section class="skills-section" id="skills">
+  <div class="container">
+
+    <div class="section-heading reveal">
+      <small>What I bring to the table</small>
+      <h2>Professional Skills & Capabilities</h2>
+      <p>
+        Practical capabilities that can support business
+        operations, customer relationships and digital growth.
+      </p>
+    </div>
+
+    <div class="skills-grid">
+
+      <div class="skill-card reveal">
+        <div class="skill-icon">📊</div>
+        <h3>CRM & Contact Management</h3>
+        <p>Organising contacts, maintaining CRM records,
+          managing customer information and supporting
+          relationship management using HubSpot.</p>
+      </div>
+
+      <div class="skill-card reveal">
+        <div class="skill-icon">💻</div>
+        <h3>Frontend Development</h3>
+        <p>Building responsive web interfaces and practical
+          website experiences using HTML, CSS and JavaScript.</p>
+      </div>
+
+      <div class="skill-card reveal">
+        <div class="skill-icon">📈</div>
+        <h3>Sales & Digital Operations</h3>
+        <p>Supporting sales processes, managing digital
+          information, tracking activities and improving
+          operational organisation.</p>
+      </div>
+
+      <div class="skill-card reveal">
+        <div class="skill-icon">📅</div>
+        <h3>Virtual & Administrative Support</h3>
+        <p>Supporting scheduling, documentation, communication,
+          research, records and administrative coordination.</p>
+      </div>
+
+      <div class="skill-card reveal">
+        <div class="skill-icon">🤝</div>
+        <h3>Customer Support</h3>
+        <p>Communicating professionally, understanding customer
+          concerns and helping people navigate problems.</p>
+      </div>
+
+      <div class="skill-card reveal">
+        <div class="skill-icon">🌐</div>
+        <h3>Community Engagement</h3>
+        <p>Supporting online communities, participant
+          communication, programme coordination and engagement.</p>
+      </div>
+
+      <div class="skill-card reveal">
+        <div class="skill-icon">📱</div>
+        <h3>Social Media Management</h3>
+        <p>Supporting digital content organisation, online
+          communication, promotional activities and engagement.</p>
+      </div>
+
+      <div class="skill-card reveal">
+        <div class="skill-icon">⚙️</div>
+        <h3>Digital Tools & Productivity</h3>
+        <p>Working with HubSpot, Google Workspace, Microsoft
+          Office and collaboration tools.</p>
+      </div>
+
+      <div class="skill-card reveal">
+        <div class="skill-icon">🛠️</div>
+        <h3>Technical Support Foundations</h3>
+        <p>Developing troubleshooting, technical problem-solving
+          and IT support capabilities.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="ticker-section">
+  <div class="ticker">
+    <span>TURNING IDEAS INTO PRACTICAL SOLUTIONS</span>
+    <span>SUPPORTING BUSINESS GROWTH</span>
+    <span>BUILDING DIGITAL EXPERIENCES</span>
+    <span>ORGANISING BUSINESS OPERATIONS</span>
+    <span>CREATING BETTER CUSTOMER EXPERIENCES</span>
+    <span>TURNING IDEAS INTO PRACTICAL SOLUTIONS</span>
+    <span>SUPPORTING BUSINESS GROWTH</span>
+    <span>BUILDING DIGITAL EXPERIENCES</span>
+    <span>ORGANISING BUSINESS OPERATIONS</span>
+    <span>CREATING BETTER CUSTOMER EXPERIENCES</span>
+  </div>
+</div>
+
+<section id="projects">
+  <div class="container">
+
+    <div class="section-heading reveal">
+      <small>Practical experience</small>
+      <h2>Projects & Digital Work</h2>
+      <p>
+        A selection of practical projects demonstrating
+        my learning, technical development and interest
+        in solving real-world business challenges.
+      </p>
+    </div>
+
+    <div class="projects-grid">
+
+      <article class="project-card reveal">
+        <div class="project-top">CAROLUXE</div>
+
+        <div class="project-content">
+          <span class="project-tag">Frontend Development</span>
+          <span class="project-tag">E-commerce</span>
+
+          <h3>Caroluxe Collection Website</h3>
+
+          <p>
+            A practical e-commerce website project built
+            using HTML, CSS and JavaScript, with a focus
+            on product presentation, customer experience
+            and digital brand presence.
+          </p>
+
+          <a href="https://caroluxeluxury-148936139.hs-sites-eu1.com/caroluxe-collection-/-luxury-shopping"
+            target="_blank" rel="noopener noreferrer"
+            class="btn btn-dark">Visit Live Website →</a>
+        </div>
+      </article>
+
+      <article class="project-card reveal">
+        <div class="project-top">CRM</div>
+
+        <div class="project-content">
+          <span class="project-tag">HubSpot</span>
+          <span class="project-tag">CRM Operations</span>
+
+          <h3>HubSpot CRM & Digital Marketing</h3>
+
+          <p>
+            A practical HubSpot project involving contact
+            management, company records, deals, products,
+            tickets, website building and digital marketing
+            activities.
+          </p>
+
+          <a href="https://lnkd.in/p/eUQ6FERv"
+            target="_blank" rel="noopener noreferrer"
+            class="btn btn-dark">Explore Project →</a>
+        </div>
+      </article>
+
+      <article class="project-card reveal">
+        <div class="project-top">OPERATIONS</div>
+
+        <div class="project-content">
+          <span class="project-tag">Sales Operations</span>
+          <span class="project-tag">Digital Operations</span>
+
+          <h3>CRM Contact Management & Sales Operations</h3>
+
+          <p>
+            A practical project focused on CRM contact
+            organisation, sales operations, digital
+            administration and business support workflows.
+          </p>
+
+          <a href="https://lnkd.in/p/eZBctsyM"
+            target="_blank" rel="noopener noreferrer"
+            class="btn btn-dark">Explore Project →</a>
+        </div>
+      </article>
+
+      <article class="project-card reveal">
+        <div class="project-top">M.O.E.</div>
+
+        <div class="project-content">
+          <span class="project-tag">Professional Portfolio</span>
+          <span class="project-tag">Web Development</span>
+
+          <h3>My Professional Portfolio</h3>
+
+          <p>
+            My personal digital portfolio, bringing
+            together my practical projects, technical
+            development, professional skills and
+            career interests.
+          </p>
+
+          <a href="https://github.com/MOE-coder-lab/Monday-Ojo-Emmanuel-Portfolio"
+            target="_blank" rel="noopener noreferrer"
+            class="btn btn-dark">View GitHub Repository →</a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section class="training-section" id="training">
+  <div class="container">
+
+    <div class="section-heading reveal">
+      <small>Learning & professional development</small>
+      <h2>Continuous Learning. Practical Growth.</h2>
+      <p>
+        Professional development is an important part
+        of my journey towards delivering better digital
+        and operational solutions.
+      </p>
+    </div>
+
+    <div class="training-grid">
+
+      <div class="training-card reveal">
+
+        <img src="digital-witch-logo.png"
+          alt="Digital Witch Support Community logo"
+          onerror="this.style.display='none';">
+
+        <h3>Digital Witch Support Community</h3>
+
+        <p>
+          Completed professional development through
+          Digital Witch Support Community, gaining
+          exposure to digital skills, IT support,
+          customer communication, CRM, digital operations
+          and remote-work practices.
+        </p>
+
+        <a href="https://www.linkedin.com/company/digital-witch-support-community/"
+          target="_blank" rel="noopener noreferrer">
+          VISIT OFFICIAL COMMUNITY →
+        </a>
+
+        <br><br>
+
+        <a href="https://lnkd.in/p/eCNVrw-x"
+          target="_blank" rel="noopener noreferrer">
+          VIEW MY DIGITAL WITCH CERTIFICATE →
+        </a>
+      </div>
+
+      <div class="training-card reveal">
+
+        <div style="font-size:43px;margin-bottom:18px;">
+          🎓
+        </div>
+
+        <h3>Google Technical Support Fundamentals</h3>
+
+        <p>
+          Currently pursuing Google Technical Support
+          Fundamentals through Coursera, developing
+          foundational knowledge in IT support,
+          troubleshooting and technical concepts.
+        </p>
+
+        <a href="https://www.coursera.org/learn/technical-support-fundamentals"
+          target="_blank" rel="noopener noreferrer">
+          EXPLORE COURSE ON COURSERA →
+        </a>
+
+        <br><br>
+
+        <a href="https://www.coursera.org/"
+          target="_blank" rel="noopener noreferrer">
+          VISIT COURSERA →
+        </a>
+      </div>
+
+    </div>
+
+    <br><br>
+
+    <div class="ticker-section" style="border-radius:10px;">
+      <div class="ticker">
+        <span>DIGITAL WITCH SUPPORT COMMUNITY</span>
+        <span>GOOGLE TECHNICAL SUPPORT FUNDAMENTALS</span>
+        <span>COURSERA</span>
+        <span>CONTINUOUS LEARNING</span>
+        <span>PROFESSIONAL DEVELOPMENT</span>
+        <span>DIGITAL WITCH SUPPORT COMMUNITY</span>
+        <span>GOOGLE TECHNICAL SUPPORT FUNDAMENTALS</span>
+        <span>COURSERA</span>
+        <span>CONTINUOUS LEARNING</span>
+        <span>PROFESSIONAL DEVELOPMENT</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="career-message reveal">
+
+      <h2>Let's Build Something Meaningful Together.</h2>
+
+      <p>
+        Whether you are a founder building a business,
+        a recruiter looking for someone with a willingness
+        to learn and contribute, or an organisation seeking
+        dependable digital and administrative support,
+        I welcome meaningful professional conversations.
+      </p>
+
+      <a href="mailto:mondayojoemmanuel350@gmail.com"
+        class="btn btn-dark">Start a Conversation →</a>
+
+    </div>
+  </div>
+</section>
+
+<section class="contact-section" id="contact">
+  <div class="container">
+
+    <div class="section-heading reveal">
+      <small>Let's connect</small>
+      <h2>Open to Meaningful Opportunities</h2>
+      <p>
+        I welcome professional connections, project
+        collaborations, remote opportunities and
+        conversations about digital business solutions.
+      </p>
+    </div>
+
+    <div class="contact-grid">
+
+      <div class="contact-info reveal">
+
+        <h3>Contact Information</h3>
+
+        <p>
+          Let's connect and explore how I can contribute
+          to your business, team or project.
+        </p>
+
+        <div class="contact-item">
+          <strong>Full Name:</strong><br>
+          Monday Ojo Emmanuel
+        </div>
+
+        <div class="contact-item">
+          <strong>Professional Identity:</strong><br>
+          M.O.E.
+        </div>
+
+        <div class="contact-item">
+          <strong>Location:</strong><br>
+          Akure, Ondo State, Nigeria
+        </div>
+
+        <div class="contact-item">
+          <strong>Email:</strong><br>
+          <a href="mailto:mondayojoemmanuel350@gmail.com">
+            mondayojoemmanuel350@gmail.com
+          </a>
+        </div>
+
+        <div class="contact-item">
+          <strong>WhatsApp:</strong><br>
+          <a href="https://wa.me/234XXXXXXXXXX"
+            target="_blank" rel="noopener noreferrer">
+            Connect on WhatsApp
+          </a>
+        </div>
+
+        <div class="contact-item">
+          <strong>LinkedIn:</strong><br>
+          <a href="https://www.linkedin.com/in/monday-ojo-emmanuel-b95439423/"
+            target="_blank" rel="noopener noreferrer">
+            Visit Professional Profile
+          </a>
+        </div>
+
+      </div>
+
+      <div class="contact-action reveal">
+
+        <h3>Professional Connections Matter.</h3>
+
+        <p>
+          I believe meaningful professional relationships
+          are built through communication, consistency,
+          trust and the willingness to create value.
+        </p>
+
+        <div class="buttons">
+          <a href="mailto:mondayojoemmanuel350@gmail.com"
+            class="btn btn-dark">Send Me an Email</a>
+
+          <a href="https://www.linkedin.com/in/monday-ojo-emmanuel-b95439423/"
+            target="_blank" rel="noopener noreferrer"
+            class="btn btn-teal">Connect on LinkedIn</a>
+        </div>
+
+        <br>
+
+        <p>
+          <strong>Portfolio:</strong><br>
+          <a href="https://moe-coder-lab.github.io/Monday-Ojo-Emmanuel-Portfolio/"
+            target="_blank" rel="noopener noreferrer"
+            style="color:var(--teal);overflow-wrap:anywhere;">
+            View My Live Portfolio
+          </a>
+        </p>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+
+    <div class="logo">M.O.E.</div>
+
+    <p style="margin-top:12px;">
+      Monday Ojo Emmanuel · Digital Operations ·
+      Frontend Development · Professional Support
+    </p>
+
+    <div class="footer-links">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </div>
+
+    <p>
+      © <span id="year"></span>
+      <strong>Monday Ojo Emmanuel.</strong>
+      All Rights Reserved.
+    </p>
+
+    <p style="margin-top:10px;">
+      Built with purpose, creativity and continuous learning.
+    </p>
+
+  </div>
+</footer>
+
+<script>
+/* Mobile navigation */
+
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
+
+menuToggle.addEventListener("click", function() {
+  const isOpen = navLinks.classList.toggle("active");
+  menuToggle.setAttribute("aria-expanded", isOpen);
+  menuToggle.textContent = isOpen ? "✕" : "☰";
+});
+
+document.querySelectorAll(".nav-links a").forEach(link => {
+  link.addEventListener("click", function() {
+    navLinks.classList.remove("active");
+    menuToggle.setAttribute("aria-expanded", "false");
+    menuToggle.textContent = "☰";
+  });
+});
+
+/* Automatic copyright year */
+
+document.getElementById("year").textContent =
+  new Date().getFullYear();
+
+/* Smooth entrance animations */
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("visible");
+      observer.unobserve(entry.target);
+    }
+  });
+}, {
+  threshold: 0.12
+});
+
+document.querySelectorAll(".reveal").forEach(element => {
+  observer.observe(element);
+});
+
+/* Pause moving banners when the browser tab is hidden */
+
+document.addEventListener("visibilitychange", function() {
+  document.querySelectorAll(".ticker").forEach(ticker => {
+    ticker.style.animationPlayState =
+      document.hidden ? "paused" : "";
+  });
+});
+</script>
+
+</body>
+</html>
